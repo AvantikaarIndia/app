@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#4B5B2A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Avantikaar">
+  <title>Avantikaar</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="backBtn" aria-label="Back" hidden>&#8592;</button>
+    <img src="logo.png" alt="Avantikaar" class="toplogo">
+    <div class="toptitle" id="pageTitle"></div>
+    <button class="icon-btn" id="refreshBtn" aria-label="Refresh">&#8635;</button>
+  </header>
+
+  <main id="view"></main>
+
+  <nav class="bottomnav" id="nav">
+    <a href="#/home" data-tab="home"><span>&#9673;</span>Home</a>
+    <a href="#/sell" data-tab="sell" class="sell-tab"><span>&#9783;</span>Sell</a>
+    <a href="#/stock" data-tab="stock"><span>&#9638;</span>Stock</a>
+    <a href="#/buy" data-tab="buy"><span>&#10010;</span>Buy</a>
+    <a href="#/more" data-tab="more"><span>&#9776;</span>More</a>
+  </nav>
+
+  <div id="modal" class="modal" hidden><div class="modal-card" id="modalCard"></div></div>
+  <div id="toast" class="toast" hidden></div>
+  <div id="loading" class="loading" hidden><div class="spinner"></div></div>
+  <div id="print-root"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
