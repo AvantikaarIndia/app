@@ -1,5 +1,5 @@
 /* Avantikaar service worker – caches the app screens so it opens fast and installs as an app */
-const CACHE = 'avk-v2';
+const CACHE = 'avk-v3';
 const FILES = ['./', './index.html', './styles.css', './app.js', './logo.png', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', function (e) { e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(FILES); })); self.skipWaiting(); });
 self.addEventListener('activate', function (e) {
